@@ -3,8 +3,16 @@ import TodosList from "./TodosList"
 import Header from "./Header"
 import InputTodo from "./InputTodo"
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 
 class TodoContainer extends React.Component {
+  componentDidMount(){
+    axios.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+    .then(response => 
+      this.setState({todos: response.data}));
+    }
+    
+  
     state = {
         todos: [],
        };
