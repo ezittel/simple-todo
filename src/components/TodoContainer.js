@@ -41,9 +41,43 @@ const TodoContainer = props => {
 
   useEffect(() => {
     //console.log("test")
-    axios
-    .get("https://jsonplaceholder.typicode.com/todos?_limit=10")
-    .then(response => setTodos(response.data))
+    const todos= [
+        {
+          id: 6,
+          title: "Brush Dog",
+          completed: false
+        },
+        {
+          id: 2,
+          title: "Feed Dog - Morning",
+          completed: false
+        },
+        {
+          id: 1,
+          title: "Dog Walk - Morning",
+          completed: false
+        },
+        {
+          id: 3,
+          title: "Feed Dog - Night",
+          completed: false
+        },
+        {
+          id: 4,
+          title: "Dog Walk - Night",
+          completed: false
+        },
+        {
+          id: 5,
+          title: "Brush Dog's Teeth",
+          completed: false
+        }
+      ]
+     
+    //axios
+    //.get("https://jsonplaceholder.typicode.com/todos?_limit=10")
+    //.then(response => setTodos(response.data))
+    setTodos(todos)
   },[]);
 
   return (

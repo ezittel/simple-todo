@@ -24,6 +24,7 @@ const TodoItem = props => {
                         onChange={() => props.handleChangeProps(id)} 
                 />
                 <button onClick={() => props.deleteTodoProps(id)}>Delete</button>
+                {" "}
                 <span style={completed ? completedStyle : null }> 
                         {title} 
                 </span>
